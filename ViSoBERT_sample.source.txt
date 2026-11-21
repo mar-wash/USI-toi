@@ -1,0 +1,7 @@
+Source: SEACrowd/visobert (public corpus mirror: phucdev/ViSoBERT)
+Rows: 3,529 sampled from the 15,737,126-row train split.
+Sampling: 36 uniformly selected dataset offsets using seed 20261120; first 3,529 non-empty rows retained.
+Formatting: one text record per line, lowercased to match Historical.txt. Original wording otherwise retained.
+License: CC-BY-NC-4.0. For research/non-commercial use.
+Dataset: https://huggingface.co/datasets/SEACrowd/visobert
+Mirror used to retrieve rows: https://huggingface.co/datasets/phucdev/ViSoBERT

@@ -1,0 +1,21 @@
+cluster,rank,distance_to_center,source,line_number,context
+0,1,0.389385,Historical.txt,2419,tôi chưa bẩm hết ông liền quở
+0,2,0.422420,ViSoBERT_sample.txt,1712,tôi đang dùng 7 plus là bao nhiêu tiền vậy đó 99678
+0,3,0.434848,ViSoBERT_sample.txt,2565,tôi khong có ý gì có khi nào đeo vàng giã không
+0,4,0.438238,Historical.txt,147,tôi như khói giám chơi đọ nào
+0,5,0.438238,Historical.txt,1441,tôi như khói giám chơi đọ nào
+1,1,0.465512,ViSoBERT_sample.txt,3461,"con tôi ngoan lắm không bao giờ phá gia chi tử, chỉ phá làng phá xóm thôi"
+1,2,0.483056,ViSoBERT_sample.txt,2461,"chàng trai của tôi mãi mãi tuổi 17, xa cách âm dương không gì thấu bằng. long time no see...."
+1,3,0.490587,ViSoBERT_sample.txt,2021,quán cf kế bên chổ tôi ở luôn nè
+1,4,0.493309,ViSoBERT_sample.txt,1108,thanh thanh huyền  nghe nhạc nhớ ngày bé canh xem chúng tôi là chiến sĩ cái đoạn các cặp đôi bài hát huyền thoại. chúc các bạn hạnh phúc
+1,5,0.494238,ViSoBERT_sample.txt,224,"ôiiii, cuốn sách tôi đi tìm nhã nam ơi, xuất bản thêm sách newbery nữa đi."
+2,1,0.502934,Historical.txt,1393,Thưa ông mẹ tôi chết đã ba năm nay
+2,2,0.509323,ViSoBERT_sample.txt,568,bởi vậy tôi mới kg đi làm đó
+2,3,0.514891,ViSoBERT_sample.txt,1125,vài hôm lại bị mất. tôi không mong như vậy.
+2,4,0.516336,Historical.txt,1005,rằng ghê tấm thịt tôi ầm ngã ra
+2,5,0.520063,Historical.txt,1391,Cho nên tôi choành cổng
+3,1,0.454539,ViSoBERT_sample.txt,3028,"tôi cứ tưởng những bài hát việt nam như của no phước thịnh sẽ có ở bản vip mà lại không có, và tôi không cảm thấy được quá nhiều quyền lợi khi nâng cấp lên bản vip. ứng dụng nhạc việt hàng đầu việt nam mà những bài hát việt mới, cũ cũng không có. tôi cảm thấ"
+3,2,0.466718,ViSoBERT_sample.txt,2421,"hồi năm , việc đầu tiên tôi ở một mình ở hn là ra cổng ktx, bảo bác xe ôm chở đến quán net gần nhất."
+3,3,0.467569,ViSoBERT_sample.txt,1664,lê huyền ko thực ra tôi ko có tiền để ăn  :) chứ mà có ăn chắc tôi cũng ăn ngang lão trư
+3,4,0.477316,ViSoBERT_sample.txt,3481,g hạ thấp mức thiệt hại có thể bởi lẽ khi đến các đảo xa b ờ thì dòng nước ấm rất ít tốc độ di chuyển nhanh sẽ không có lực can nên mức giảm cấp rất thấp nhưng tôi sẽ cố gắng vì cái tâm ok
+3,5,0.478794,ViSoBERT_sample.txt,690,và tôi hài lòng với thái độ của bản thân chứ không hề muốn thay đổi gì thêm về nhận thức đối với vấn đề này.

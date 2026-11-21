@@ -1,0 +1,100 @@
+{
+  "bert/seed_17": {
+    "cluster_sizes": {
+      "0": 26,
+      "1": 21,
+      "2": 54,
+      "3": 31
+    },
+    "silhouette_euclidean": 0.04870541766285896,
+    "calinski_harabasz": 6.3871511452022345,
+    "davies_bouldin": 3.6261145051929526
+  },
+  "bamibert/seed_17": {
+    "cluster_sizes": {
+      "0": 33,
+      "1": 15,
+      "2": 38,
+      "3": 46
+    },
+    "silhouette_euclidean": 0.08296498656272888,
+    "calinski_harabasz": 12.325406629561602,
+    "davies_bouldin": 3.0367233612074593
+  },
+  "bert/seed_23": {
+    "cluster_sizes": {
+      "0": 15,
+      "1": 54,
+      "2": 58,
+      "3": 5
+    },
+    "silhouette_euclidean": 0.05502093955874443,
+    "calinski_harabasz": 6.365258695187457,
+    "davies_bouldin": 3.1348135585521555
+  },
+  "bamibert/seed_23": {
+    "cluster_sizes": {
+      "0": 59,
+      "1": 37,
+      "2": 21,
+      "3": 15
+    },
+    "silhouette_euclidean": 0.09354501217603683,
+    "calinski_harabasz": 12.383110310491876,
+    "davies_bouldin": 2.7147707383629007
+  },
+  "bert/seed_42": {
+    "cluster_sizes": {
+      "0": 30,
+      "1": 30,
+      "2": 28,
+      "3": 44
+    },
+    "silhouette_euclidean": 0.042192600667476654,
+    "calinski_harabasz": 6.220996923424818,
+    "davies_bouldin": 4.0103457086374785
+  },
+  "bamibert/seed_42": {
+    "cluster_sizes": {
+      "0": 15,
+      "1": 44,
+      "2": 39,
+      "3": 34
+    },
+    "silhouette_euclidean": 0.07933305948972702,
+    "calinski_harabasz": 12.339192752775293,
+    "davies_bouldin": 3.0272329838472665
+  },
+  "bert/seed_agreement_ari": {
+    "seed_17_vs_23": 0.36727879910547945,
+    "seed_17_vs_42": 0.4606666961795564,
+    "seed_23_vs_42": 0.3831991650615547
+  },
+  "bamibert/seed_agreement_ari": {
+    "seed_17_vs_23": 0.6712710155949031,
+    "seed_17_vs_42": 0.7099144243415146,
+    "seed_23_vs_42": 0.5047140083406682
+  },
+  "bert/consensus_17_23_42": {
+    "cluster_sizes": {
+      "0": 39,
+      "1": 22,
+      "2": 21,
+      "3": 50
+    },
+    "silhouette_euclidean": 0.04493545740842819,
+    "calinski_harabasz": 6.275637369674425,
+    "davies_bouldin": 3.8118136400081193
+  },
+  "bamibert/consensus_17_23_42": {
+    "cluster_sizes": {
+      "0": 39,
+      "1": 46,
+      "2": 32,
+      "3": 15
+    },
+    "silhouette_euclidean": 0.08337992429733276,
+    "calinski_harabasz": 12.307898113362036,
+    "davies_bouldin": 3.048528433474745
+  }
+}

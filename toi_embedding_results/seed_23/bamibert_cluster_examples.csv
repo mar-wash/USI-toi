@@ -1,0 +1,21 @@
+cluster,rank,distance_to_center,source,line_number,context
+0,1,0.469220,ViSoBERT_sample.txt,1664,lê huyền ko thực ra tôi ko có tiền để ăn  :) chứ mà có ăn chắc tôi cũng ăn ngang lão trư
+0,2,0.469485,ViSoBERT_sample.txt,1386,nếu em vào trường với suy nghĩ đó thì tôi quan ngại hơn là quan tâm :)
+0,3,0.476208,ViSoBERT_sample.txt,2421,"hồi năm , việc đầu tiên tôi ở một mình ở hn là ra cổng ktx, bảo bác xe ôm chở đến quán net gần nhất."
+0,4,0.487674,ViSoBERT_sample.txt,690,và tôi hài lòng với thái độ của bản thân chứ không hề muốn thay đổi gì thêm về nhận thức đối với vấn đề này.
+0,5,0.492444,ViSoBERT_sample.txt,224,"ôiiii, cuốn sách tôi đi tìm nhã nam ơi, xuất bản thêm sách newbery nữa đi."
+1,1,0.510660,Historical.txt,1393,Thưa ông mẹ tôi chết đã ba năm nay
+1,2,0.515698,ViSoBERT_sample.txt,1544,người đành đỏ lửa tôi theo
+1,3,0.518130,Historical.txt,1391,Cho nên tôi choành cổng
+1,4,0.520019,Historical.txt,1005,rằng ghê tấm thịt tôi ầm ngã ra
+1,5,0.520971,Historical.txt,1168,chân đứng lại tôi nghe
+2,1,0.433998,ViSoBERT_sample.txt,1867,"anh cứ viết lên facebook đi, chúng tôi đang chờ vào để chửi anh đây :d"
+2,2,0.440575,ViSoBERT_sample.txt,1108,thanh thanh huyền  nghe nhạc nhớ ngày bé canh xem chúng tôi là chiến sĩ cái đoạn các cặp đôi bài hát huyền thoại. chúc các bạn hạnh phúc
+2,3,0.450490,ViSoBERT_sample.txt,3461,"con tôi ngoan lắm không bao giờ phá gia chi tử, chỉ phá làng phá xóm thôi"
+2,4,0.456464,Historical.txt,3240,dân an nam thấy sự tàn nhẫn như ai không đau lòng dứt ruột chúng tôi bảo rõ cho công chúng biết
+2,5,0.471056,ViSoBERT_sample.txt,1154,này thì 100 - 0 với chúng tôi 🤭
+3,1,0.389385,Historical.txt,2419,tôi chưa bẩm hết ông liền quở
+3,2,0.422420,ViSoBERT_sample.txt,1712,tôi đang dùng 7 plus là bao nhiêu tiền vậy đó 99678
+3,3,0.434848,ViSoBERT_sample.txt,2565,tôi khong có ý gì có khi nào đeo vàng giã không
+3,4,0.438238,Historical.txt,147,tôi như khói giám chơi đọ nào
+3,5,0.438238,Historical.txt,1441,tôi như khói giám chơi đọ nào

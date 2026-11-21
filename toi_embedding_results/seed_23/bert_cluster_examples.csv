@@ -1,0 +1,21 @@
+cluster,rank,distance_to_center,source,line_number,context
+0,1,0.408094,ViSoBERT_sample.txt,2079,"tôi đau đớn, tôi gục ngã. nhưng điều quan trọng nhất là tôi tìm thấy sức mạnh của nội tại và tôi chiến đấu vì nó. ai trong chúng ta cũng có những cuộc chiến cá nhâ"
+0,2,0.440191,ViSoBERT_sample.txt,3028,"tôi cứ tưởng những bài hát việt nam như của no phước thịnh sẽ có ở bản vip mà lại không có, và tôi không cảm thấy được quá nhiều quyền lợi khi nâng cấp lên bản vip. ứng dụng nhạc việt hàng đầu việt nam mà những bài hát việt mới, cũ cũng không có. tôi cảm thấ"
+0,3,0.446782,ViSoBERT_sample.txt,2079,"tôi đau đớn, tôi gục ngã. nhưng điều quan trọng nhất là tôi tìm thấy sức mạnh của nội tại và tôi chiến đấu vì nó. ai trong chúng ta cũng có những cuộc chiến cá nhân nhưng điều quan trọng nhất là tin vào giá trị của bản "
+0,4,0.449693,ViSoBERT_sample.txt,2079,"tôi đau đớn, tôi gục ngã. nhưng điều quan trọng nhất là tôi tìm thấy sức mạnh của nội tại và tôi chiến đấu vì nó. ai trong chúng ta cũng có những cuộc chiến cá nhân nhưng điều quan trọng nhất là tin vào giá trị của bản thân ""đội vương miện chính mình"". viế"
+0,5,0.463477,ViSoBERT_sample.txt,2079,"tôi đau đớn, tôi gục ngã. nhưng điều quan trọng nhất là tôi tìm thấy sức mạnh của nội tại và tôi chiến đấu vì nó. ai trong chúng ta cũng có những cuộc chiến cá nhân nhưng điều "
+1,1,0.475109,ViSoBERT_sample.txt,823,"lợi ích với ai thì tôi ko biết chứ thấy tác hại kể ra vô bờ bến. bác nào fap nhiều tự cảm thấy cơ thể mình mệt mỏi và buồn ngủ nhiều hơn chưa? đau lưng, thỉnh thoảng có màng mờ ở mắt"
+1,2,0.480183,ViSoBERT_sample.txt,1664,lê huyền ko thực ra tôi ko có tiền để ăn  :) chứ mà có ăn chắc tôi cũng ăn ngang lão trư
+1,3,0.491216,ViSoBERT_sample.txt,1664,lê huyền ko thực ra tôi ko có tiền để ăn  :) chứ mà có ăn chắc tôi cũng ăn ngang lão trư
+1,4,0.496589,ViSoBERT_sample.txt,3456,các bác vtv đừng đăng những tin này nữa tôi thấy tôi vui lắm 🤣🤣
+1,5,0.532288,ViSoBERT_sample.txt,635,"ạn văn kể về ước mơ của em. phát bài ra thì tôi được  điểm, đoạn văn của tôi viết về ước mơ có  cái xe điều khiển từ xa, cô nói tôi không đọc kĩ đề, rõ ràng là tôi đã đọc nó nhiều lần trước kia r, mấy cái văn mẫu mà anh chị viết nó cũng rập khuôn quá, kĩ sư, bác sĩ, phi công. giờ nghĩ lại tôi đc  điểm là đúng r, ước mơ nh"
+2,1,0.431252,Historical.txt,2372,người đà hiển hoạn tôi còn hàn nho
+2,2,0.463488,ViSoBERT_sample.txt,2021,quán cf kế bên chổ tôi ở luôn nè
+2,3,0.463928,Historical.txt,1073,cơm tôi bưng xuống sẵn sàng liền xơi
+2,4,0.480869,Historical.txt,1005,rằng ghê tấm thịt tôi ầm ngã ra
+2,5,0.490736,ViSoBERT_sample.txt,1460,tôi thì chinh phục em bằng cơ bắp
+3,1,0.358269,ViSoBERT_sample.txt,635,"chị lớp  lên 4. mình học vượt tất cả các môn, nhớ có môn văn cô ra đề : hãy viết một đoạn văn kể về ước mơ của em. phát bài ra thì tôi được  điểm, đoạn văn của tôi viết về ước mơ có  cái xe điều khiển từ xa, cô nói tôi không đọc kĩ đề, rõ ràng là tôi đã đọc nó nhiều lần trước kia r, mấy cái văn mẫu mà anh chị viết nó cũng"
+3,2,0.410302,ViSoBERT_sample.txt,635,"ường để kèm học cùng các anh chị lớp  lên 4. mình học vượt tất cả các môn, nhớ có môn văn cô ra đề : hãy viết một đoạn văn kể về ước mơ của em. phát bài ra thì tôi được  điểm, đoạn văn của tôi viết về ước mơ có  cái xe điều khiển từ xa, cô nói tôi không đọc kĩ đề, rõ ràng là tôi đã đọc nó nhiều lần trước kia r, mấy cái vă"
+3,3,0.427709,ViSoBERT_sample.txt,1316,guny làm ăn  gì  vậy 2 ngay rồi mà mua gói 1000xu tiền thì lấy rùi vậy xu của tôi đâu tôi nạp để nhận các nhiệm vụ nạp lần đầu tiên mà hôm nay ngày cuối rồi mà chua chuyển xu là sao ngày mai chuyển xu chả phải tôi chịu thiệt à guny đóng cửa 
+3,4,0.455177,ViSoBERT_sample.txt,1316,guny làm ăn  gì  vậy 2 ngay rồi mà mua gói 1000xu tiền thì lấy rùi vậy xu của tôi đâu tôi nạp để nhận các nhiệm vụ nạp lần đầu tiên mà hôm nay ngày cuối rồi mà chua chuyển xu là sao ngày mai chuyển xu chả phải tôi chịu thiệt à guny đóng cửa đi 6 ngà
+3,5,0.588970,ViSoBERT_sample.txt,2460,"""chàng trai bên bạn năm 17t là người mà bạn sẽ chẳng bao giờ quên được. em của ngày hôm ấy là tuyệt với nhất. còn tôi của mãi sau này mới là tuyệt với nhất. giữa 2 con người tuyệt vời ấy cách nhau 1 tuổi trẻ. dù chạy thế nào cũng chẳng thắng được thanh xuân"" (st)"

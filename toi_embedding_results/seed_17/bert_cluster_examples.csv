@@ -1,0 +1,21 @@
+cluster,rank,distance_to_center,source,line_number,context
+0,1,0.485888,ViSoBERT_sample.txt,3465,ở nhà con chúng tôi ngoan lắm
+0,2,0.526599,Historical.txt,3247,dân chúng tôi ao ước rằng bài sẽ thấu đến quan toàn quyền
+0,3,0.528699,ViSoBERT_sample.txt,1154,này thì 100 - 0 với chúng tôi 🤭
+0,4,0.532071,ViSoBERT_sample.txt,3456,các bác vtv đừng đăng những tin này nữa tôi thấy tôi vui lắm 🤣🤣
+0,5,0.536873,ViSoBERT_sample.txt,3378,cho tôi xin mua một vé khứ hồi
+1,1,0.427278,ViSoBERT_sample.txt,2079,"tôi đau đớn, tôi gục ngã. nhưng điều quan trọng nhất là tôi tìm thấy sức mạnh của nội tại và tôi chiến đấu vì nó. ai trong chúng ta cũng có những cuộc chiến cá nhâ"
+1,2,0.457790,ViSoBERT_sample.txt,2079,"tôi đau đớn, tôi gục ngã. nhưng điều quan trọng nhất là tôi tìm thấy sức mạnh của nội tại và tôi chiến đấu vì nó. ai trong chúng ta cũng có những cuộc chiến cá nhân nhưng điều quan trọng nhất là tin vào giá trị của bản "
+1,3,0.459698,ViSoBERT_sample.txt,3028,"tôi cứ tưởng những bài hát việt nam như của no phước thịnh sẽ có ở bản vip mà lại không có, và tôi không cảm thấy được quá nhiều quyền lợi khi nâng cấp lên bản vip. ứng dụng nhạc việt hàng đầu việt nam mà những bài hát việt mới, cũ cũng không có. tôi cảm thấ"
+1,4,0.460966,ViSoBERT_sample.txt,823,"lợi ích với ai thì tôi ko biết chứ thấy tác hại kể ra vô bờ bến. bác nào fap nhiều tự cảm thấy cơ thể mình mệt mỏi và buồn ngủ nhiều hơn chưa? đau lưng, thỉnh thoảng có màng mờ ở mắt"
+1,5,0.469814,ViSoBERT_sample.txt,2079,"tôi đau đớn, tôi gục ngã. nhưng điều quan trọng nhất là tôi tìm thấy sức mạnh của nội tại và tôi chiến đấu vì nó. ai trong chúng ta cũng có những cuộc chiến cá nhân nhưng điều "
+2,1,0.424618,Historical.txt,2372,người đà hiển hoạn tôi còn hàn nho
+2,2,0.455487,ViSoBERT_sample.txt,2021,quán cf kế bên chổ tôi ở luôn nè
+2,3,0.466588,Historical.txt,1073,cơm tôi bưng xuống sẵn sàng liền xơi
+2,4,0.469708,Historical.txt,1005,rằng ghê tấm thịt tôi ầm ngã ra
+2,5,0.481543,ViSoBERT_sample.txt,1460,tôi thì chinh phục em bằng cơ bắp
+3,1,0.475815,ViSoBERT_sample.txt,1664,lê huyền ko thực ra tôi ko có tiền để ăn  :) chứ mà có ăn chắc tôi cũng ăn ngang lão trư
+3,2,0.490213,ViSoBERT_sample.txt,1664,lê huyền ko thực ra tôi ko có tiền để ăn  :) chứ mà có ăn chắc tôi cũng ăn ngang lão trư
+3,3,0.497075,ViSoBERT_sample.txt,635,"ạn văn kể về ước mơ của em. phát bài ra thì tôi được  điểm, đoạn văn của tôi viết về ước mơ có  cái xe điều khiển từ xa, cô nói tôi không đọc kĩ đề, rõ ràng là tôi đã đọc nó nhiều lần trước kia r, mấy cái văn mẫu mà anh chị viết nó cũng rập khuôn quá, kĩ sư, bác sĩ, phi công. giờ nghĩ lại tôi đc  điểm là đúng r, ước mơ nh"
+3,4,0.505602,ViSoBERT_sample.txt,635," điểm là đúng r, ước mơ nhỏ bé quá, lại quên muốn nói là phải đc bố tặng, đc chơi cùng với mẹ, chiều chiều đc cầm ra chơi với lũ trẻ xóm ngoài. giờ đc viết lại tôi sẽ để giấy trắng, ước mơ nào mà được đánh giá bằng điểm số chứ. 😂"
+3,5,0.518718,ViSoBERT_sample.txt,635,"i không đọc kĩ đề, rõ ràng là tôi đã đọc nó nhiều lần trước kia r, mấy cái văn mẫu mà anh chị viết nó cũng rập khuôn quá, kĩ sư, bác sĩ, phi công. giờ nghĩ lại tôi đc  điểm là đúng r, ước mơ nhỏ bé quá, lại quên muốn nói là phải đc bố tặng, đc chơi cùng với mẹ, chiều chiều đc cầm ra chơi với lũ trẻ xóm ngoài. giờ đc viết "
