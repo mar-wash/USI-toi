@@ -14,6 +14,7 @@ from typing import Iterable, Iterator
 
 
 VISOBERT_REPO = "SEACrowd/visobert"
+VISOBERT_CONFIG = "visobert_seacrowd_ssp"
 VIEBOOKREAD_REPO = "thaodd11/VieBookRead"
 VIEBOOKREAD_ARCHIVE = "final.zip"
 TEXT_FIELD_NAMES = {
@@ -32,7 +33,11 @@ def iter_visobert_records(max_records: int, seed: int) -> Iterator[tuple[str, in
         raise RuntimeError("Install the `datasets` package from requirements.txt.") from exc
 
     dataset = load_dataset(
-        VISOBERT_REPO, split="train", streaming=True, trust_remote_code=True
+        VISOBERT_REPO,
+        name=VISOBERT_CONFIG,
+        split="train",
+        streaming=True,
+        trust_remote_code=True,
     )
     if max_records > 0:
         dataset = dataset.shuffle(seed=seed, buffer_size=max(10_000, max_records)).take(max_records)

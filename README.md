@@ -22,8 +22,10 @@ VieBookRead requires gated access. Accept its terms on the dataset page, then
 authenticate with Hugging Face in the environment where you run the script:
 
 
-The ViSoBERT loader uses the dataset's SEACrowd loading script, so the
-`seacrowd` dependency is included in `requirements.txt`. The VieBookRead reader
+The ViSoBERT loader selects the `visobert_seacrowd_ssp` configuration, which
+provides the corpus as unlabeled text records. It uses the dataset's SEACrowd
+loading script, so the `seacrowd` dependency is included in `requirements.txt`.
+The VieBookRead reader
 downloads only `final.zip`. It looks for text fields in
 supported text, JSON, and table files inside that archive; if the archive uses
 an unrecognized field name, provide it with `--viebookread-text-key`. You can
