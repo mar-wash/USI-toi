@@ -21,9 +21,6 @@ python -m pip install -r requirements.txt
 VieBookRead requires gated access. Accept its terms on the dataset page, then
 authenticate with Hugging Face in the environment where you run the script:
 
-```bash
-hf auth login
-```
 
 The ViSoBERT loader uses the dataset's SEACrowd loading script, so the
 `seacrowd` dependency is included in `requirements.txt`. The VieBookRead reader
