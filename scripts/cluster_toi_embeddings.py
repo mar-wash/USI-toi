@@ -15,6 +15,7 @@ import re
 import sys
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Iterable
 
 import matplotlib
 
@@ -26,15 +27,13 @@ from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import normalize
 from transformers import AutoModel, AutoTokenizer
+from dataset_sources import iter_viebookread_records, iter_visobert_records
 
 
 DEFAULT_MODELS = {
     "bert": "google-bert/bert-base-multilingual-cased",
     "bamibert": "Qualcomm-AI-Research/BamiBERT",
 }
-WORD_RE = re.compile(r"(?<!\w)tôi(?!\w)", re.IGNORECASE)
-
-
 @dataclass
 class Occurrence:
     source: str
@@ -45,29 +44,30 @@ class Occurrence:
     target_end: int = 0
 
 
-def read_occurrences(paths: list[Path], radius: int) -> list[Occurrence]:
+def read_occurrences(
+    source_records: Iterable[tuple[str, int, str]], target: str, radius: int,
+    max_occurrences: int = 0,
+) -> list[Occurrence]:
     records: list[Occurrence] = []
-    for path in paths:
-        with path.open(encoding="utf-8") as handle:
-            for line_number, line in enumerate(handle, start=1):
-                text = line.strip()
-                matches = list(WORD_RE.finditer(text))
-                for match in matches:
-                    left = max(0, match.start() - radius)
-                    right = min(len(text), match.end() + radius)
-                    context = text[left:right]
-                    records.append(
-                        Occurrence(
-                            source=str(path),
-                            line_number=line_number,
-                            context=context,
-                            model_text=context,
-                            target_start=match.start() - left,
-                            target_end=match.end() - left,
-                        )
-                    )
-    if not records:
-        raise ValueError("No standalone occurrences of 'tôi' were found.")
+    target_re = re.compile(rf"(?<!\w){re.escape(target)}(?!\w)", re.IGNORECASE)
+    for source, row_number, text in source_records:
+        text = text.strip()
+        for match in target_re.finditer(text):
+            left = max(0, match.start() - radius)
+            right = min(len(text), match.end() + radius)
+            context = text[left:right]
+            records.append(
+                Occurrence(
+                    source=source,
+                    line_number=row_number,
+                    context=context,
+                    model_text=context,
+                    target_start=match.start() - left,
+                    target_end=match.end() - left,
+                )
+            )
+            if max_occurrences and len(records) >= max_occurrences:
+                return records
     return records
 
 
@@ -193,8 +193,18 @@ def save_model_outputs(name: str, vectors: np.ndarray, records: list[Occurrence]
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--inputs", nargs="+", type=Path,
-                        default=[Path("Historical.txt"), Path("ViSoBERT_sample.txt")])
+    parser.add_argument("--datasets", nargs="+", choices=["visobert", "viebookread"],
+                        default=["visobert", "viebookread"])
+    parser.add_argument("--max-records-per-dataset", type=int, default=10_000,
+                        help="Randomly sample this many text records per dataset; 0 means all records.")
+    parser.add_argument("--max-occurrences-per-dataset", type=int, default=10_000,
+                        help="Cap target occurrences per dataset; 0 means no cap.")
+    parser.add_argument("--sample-seed", type=int, default=17)
+    parser.add_argument("--target", default="tôi", help="Standalone target word to embed.")
+    parser.add_argument("--viebookread-archive", type=Path,
+                        help="Use an already downloaded VieBookRead final.zip instead of Hugging Face.")
+    parser.add_argument("--viebookread-text-key",
+                        help="Optional text field name if VieBookRead final.zip uses an unrecognized JSON/CSV key.")
     parser.add_argument("--output-dir", type=Path, default=Path("toi_embedding_results"))
     parser.add_argument("--device", choices=["auto", "mps", "cpu"], default="auto")
     parser.add_argument("--clusters", type=int, default=4)
@@ -205,18 +215,42 @@ def main() -> int:
     parser.add_argument("--seed", type=int, default=17)
     args = parser.parse_args()
 
-    for path in args.inputs:
-        if not path.is_file():
-            parser.error(f"Input file not found: {path}")
+    if args.max_records_per_dataset < 0 or args.max_occurrences_per_dataset < 0:
+        parser.error("record and occurrence limits must be zero or positive")
     if args.clusters < 2 or args.examples_per_cluster < 1:
         parser.error("--clusters must be at least 2 and --examples-per-cluster at least 1")
     if args.max_length < 8 or args.context_radius < 1 or args.batch_size < 1:
         parser.error("max length, context radius, and batch size must be positive")
 
-    records = read_occurrences(args.inputs, args.context_radius)
+    records: list[Occurrence] = []
+    occurrence_counts: dict[str, int] = {}
+    for dataset_name in args.datasets:
+        if dataset_name == "visobert":
+            source_records = iter_visobert_records(args.max_records_per_dataset, args.sample_seed)
+        else:
+            source_records = iter_viebookread_records(
+                args.max_records_per_dataset,
+                args.sample_seed,
+                local_archive=args.viebookread_archive,
+                text_key=args.viebookread_text_key,
+            )
+        dataset_records = read_occurrences(
+            source_records,
+            args.target,
+            args.context_radius,
+            max_occurrences=args.max_occurrences_per_dataset,
+        )
+        occurrence_counts[dataset_name] = len(dataset_records)
+        records.extend(dataset_records)
+    if not records:
+        raise ValueError(
+            f"No standalone occurrences of {args.target!r} were found in the selected datasets."
+        )
+
     device = choose_device(args.device)
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    print(f"Found {len(records)} occurrences of standalone 'tôi'; inference device: {device}")
+    counts = ", ".join(f"{source}: {count}" for source, count in occurrence_counts.items())
+    print(f"Found {len(records)} occurrences of standalone {args.target!r} ({counts}); device: {device}")
 
     for name, model_id in DEFAULT_MODELS.items():
         print(f"Loading {model_id}")
