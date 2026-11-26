@@ -44,7 +44,63 @@ def load_model(base_dir: Path, model: str) -> tuple[np.ndarray, list[dict[str, s
     return vectors, rows, original_labels
 
 
-def cluster_metrics(vectors: np.ndarray, labels: np.ndarray) -> dict[str, object]:
+def source_category(source: str) -> str:
+    normalized = source.casefold()
+    if "visobert" in normalized:
+        return "ViSoBERT"
+    if "viebookread" in normalized:
+        return "VieBookRead"
+    return source or "unknown"
+
+
+def source_cluster_metrics(
+    rows: list[dict[str, str]], labels: np.ndarray
+) -> dict[str, object]:
+    if len(rows) != len(labels):
+        raise ValueError("Source rows and cluster labels do not align.")
+
+    clusters = sorted(int(value) for value in np.unique(labels))
+    sources = sorted({source_category(row.get("source", "")) for row in rows})
+    counts = np.zeros((len(clusters), len(sources)), dtype=np.int64)
+    cluster_index = {cluster: index for index, cluster in enumerate(clusters)}
+    source_index = {source: index for index, source in enumerate(sources)}
+    for row, label in zip(rows, labels):
+        source = source_category(row.get("source", ""))
+        counts[cluster_index[int(label)], source_index[source]] += 1
+
+    per_cluster: dict[str, object] = {}
+    for index, cluster in enumerate(clusters):
+        total = int(counts[index].sum())
+        per_cluster[str(cluster)] = {
+            "total": total,
+            "by_source": {
+                source: int(counts[index, source_index[source]]) for source in sources
+            },
+            "proportion_by_source": {
+                source: float(counts[index, source_index[source]] / total)
+                if total else 0.0
+                for source in sources
+            },
+        }
+
+    cramers_v = None
+    if len(clusters) > 1 and len(sources) > 1 and counts.sum() > 0:
+        total = float(counts.sum())
+        expected = np.outer(counts.sum(axis=1), counts.sum(axis=0)) / total
+        valid = expected > 0
+        chi_squared = float(np.sum(((counts - expected) ** 2)[valid] / expected[valid]))
+        denominator = total * min(len(clusters) - 1, len(sources) - 1)
+        cramers_v = float(np.sqrt(chi_squared / denominator)) if denominator else None
+
+    return {
+        "source_counts_by_cluster": per_cluster,
+        "source_cluster_association_cramers_v": cramers_v,
+    }
+
+
+def cluster_metrics(
+    vectors: np.ndarray, labels: np.ndarray, rows: list[dict[str, str]] | None = None
+) -> dict[str, object]:
     unique, counts = np.unique(labels, return_counts=True)
     result: dict[str, object] = {
         "cluster_sizes": {str(int(k)): int(v) for k, v in zip(unique, counts)},
@@ -53,6 +109,8 @@ def cluster_metrics(vectors: np.ndarray, labels: np.ndarray) -> dict[str, object
         result["silhouette_euclidean"] = float(silhouette_score(vectors, labels))
         result["calinski_harabasz"] = float(calinski_harabasz_score(vectors, labels))
         result["davies_bouldin"] = float(davies_bouldin_score(vectors, labels))
+    if rows is not None:
+        result.update(source_cluster_metrics(rows, labels))
     return result
 
 
@@ -123,7 +181,7 @@ def write_outputs(
         cluster_labels=labels,
         centers=centers,
     )
-    return cluster_metrics(vectors, labels)
+    return cluster_metrics(vectors, labels, rows)
 
 
 def coassociation_consensus(runs: list[np.ndarray], n_clusters: int) -> np.ndarray:
@@ -162,7 +220,7 @@ def main() -> None:
     metrics: dict[str, dict[str, object]] = {}
     for model, (vectors, rows, initial_labels, coords) in models.items():
         seed_labels[model][17] = initial_labels
-        metrics[f"{model}/seed_17"] = cluster_metrics(vectors, initial_labels)
+        metrics[f"{model}/seed_17"] = cluster_metrics(vectors, initial_labels, rows)
 
     for seed in args.seeds:
         run_dir = args.base_dir / f"seed_{seed}"

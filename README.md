@@ -41,8 +41,10 @@ python scripts/cluster_toi_embeddings.py --device mps
 ```
 
 `--device auto` selects MPS when available and otherwise uses CPU. The defaults
-sample up to 10,000 records and retain up to 10,000 occurrences of “tôi” from
-each dataset. The record sample seed is 17. To use only one dataset, add either
+sample up to 10,000 records and retain up to 10,000 distinct “tôi” context
+snippets from each dataset. Duplicate snippets are identified after Unicode
+normalization, case folding, and whitespace normalization. The record sample
+seed is 17. To use only one dataset, add either
 `--datasets visobert` or `--datasets viebookread`. To use all available records,
 set both limits to zero:
 
@@ -67,7 +69,11 @@ python scripts/cluster_saved_embeddings.py
 
 By default it uses seeds 23 and 42 alongside the original seed 17, saves each
 seed and the consensus in separate subfolders, and writes clustering metrics.
-Use `--base-dir` if the embeddings are in a different output directory.
+The metrics JSON includes the ViSoBERT/VieBookRead counts and proportions in
+each cluster, plus Cramér's V as a descriptive measure of source-cluster
+association. A high association can mean clusters follow dataset differences,
+so inspect the source mixture along with the example contexts. Use `--base-dir`
+if the embeddings are in a different output directory.
 
 ## Outputs
 

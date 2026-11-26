@@ -1,18 +1,11 @@
 #!/usr/bin/env python3
-"""Embed occurrences of Vietnamese “tôi”, cluster them, and save examples/plots.
-
-Each vector is the contextual hidden state for one occurrence of “tôi” in its
-surrounding line. The two encoders are clustered independently. Transformer
-inference uses Apple MPS when available; K-means and PCA run on the CPU.
-BamiBERT handles raw Vietnamese text directly, so no external segmenter is needed.
-"""
-
 from __future__ import annotations
 
 import argparse
 import csv
 import re
 import sys
+import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
@@ -49,6 +42,7 @@ def read_occurrences(
     max_occurrences: int = 0,
 ) -> list[Occurrence]:
     records: list[Occurrence] = []
+    seen_contexts: set[str] = set()
     target_re = re.compile(rf"(?<!\w){re.escape(target)}(?!\w)", re.IGNORECASE)
     for source, row_number, text in source_records:
         text = text.strip()
@@ -56,6 +50,14 @@ def read_occurrences(
             left = max(0, match.start() - radius)
             right = min(len(text), match.end() + radius)
             context = text[left:right]
+            # Treat copies differing only in Unicode compatibility forms,
+            # letter case, or whitespace as the same contextual occurrence.
+            context_key = " ".join(
+                unicodedata.normalize("NFKC", context).casefold().split()
+            )
+            if context_key in seen_contexts:
+                continue
+            seen_contexts.add(context_key)
             records.append(
                 Occurrence(
                     source=source,
