@@ -1,0 +1,476 @@
+{
+  "bert/seed_17": {
+    "cluster_sizes": {
+      "0": 460,
+      "1": 306,
+      "2": 894,
+      "3": 340
+    },
+    "silhouette_euclidean": 0.08338646590709686,
+    "calinski_harabasz": 142.6159370556979,
+    "davies_bouldin": 3.247922260801362,
+    "source_counts_by_cluster": {
+      "0": {
+        "total": 460,
+        "by_source": {
+          "ViSoBERT": 383,
+          "VieBookRead": 77
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.8326086956521739,
+          "VieBookRead": 0.1673913043478261
+        }
+      },
+      "1": {
+        "total": 306,
+        "by_source": {
+          "ViSoBERT": 53,
+          "VieBookRead": 253
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.17320261437908496,
+          "VieBookRead": 0.826797385620915
+        }
+      },
+      "2": {
+        "total": 894,
+        "by_source": {
+          "ViSoBERT": 383,
+          "VieBookRead": 511
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.42841163310961966,
+          "VieBookRead": 0.5715883668903803
+        }
+      },
+      "3": {
+        "total": 340,
+        "by_source": {
+          "ViSoBERT": 181,
+          "VieBookRead": 159
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.5323529411764706,
+          "VieBookRead": 0.4676470588235294
+        }
+      }
+    },
+    "source_cluster_association_cramers_v": 0.4207289075659043
+  },
+  "bamibert/seed_17": {
+    "cluster_sizes": {
+      "0": 618,
+      "1": 665,
+      "2": 314,
+      "3": 403
+    },
+    "silhouette_euclidean": 0.07507230341434479,
+    "calinski_harabasz": 152.8367127641048,
+    "davies_bouldin": 3.1640653725090044,
+    "source_counts_by_cluster": {
+      "0": {
+        "total": 618,
+        "by_source": {
+          "ViSoBERT": 483,
+          "VieBookRead": 135
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.7815533980582524,
+          "VieBookRead": 0.21844660194174756
+        }
+      },
+      "1": {
+        "total": 665,
+        "by_source": {
+          "ViSoBERT": 224,
+          "VieBookRead": 441
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.3368421052631579,
+          "VieBookRead": 0.6631578947368421
+        }
+      },
+      "2": {
+        "total": 314,
+        "by_source": {
+          "ViSoBERT": 55,
+          "VieBookRead": 259
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.1751592356687898,
+          "VieBookRead": 0.8248407643312102
+        }
+      },
+      "3": {
+        "total": 403,
+        "by_source": {
+          "ViSoBERT": 238,
+          "VieBookRead": 165
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.5905707196029777,
+          "VieBookRead": 0.4094292803970223
+        }
+      }
+    },
+    "source_cluster_association_cramers_v": 0.4541640938435697
+  },
+  "bert/seed_23": {
+    "cluster_sizes": {
+      "0": 340,
+      "1": 306,
+      "2": 453,
+      "3": 901
+    },
+    "silhouette_euclidean": 0.08353674411773682,
+    "calinski_harabasz": 142.62508579243442,
+    "davies_bouldin": 3.2394420675600433,
+    "source_counts_by_cluster": {
+      "0": {
+        "total": 340,
+        "by_source": {
+          "ViSoBERT": 181,
+          "VieBookRead": 159
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.5323529411764706,
+          "VieBookRead": 0.4676470588235294
+        }
+      },
+      "1": {
+        "total": 306,
+        "by_source": {
+          "ViSoBERT": 53,
+          "VieBookRead": 253
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.17320261437908496,
+          "VieBookRead": 0.826797385620915
+        }
+      },
+      "2": {
+        "total": 453,
+        "by_source": {
+          "ViSoBERT": 376,
+          "VieBookRead": 77
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.8300220750551877,
+          "VieBookRead": 0.16997792494481237
+        }
+      },
+      "3": {
+        "total": 901,
+        "by_source": {
+          "ViSoBERT": 390,
+          "VieBookRead": 511
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.4328523862375139,
+          "VieBookRead": 0.5671476137624861
+        }
+      }
+    },
+    "source_cluster_association_cramers_v": 0.41577963338387236
+  },
+  "bamibert/seed_23": {
+    "cluster_sizes": {
+      "0": 666,
+      "1": 314,
+      "2": 617,
+      "3": 403
+    },
+    "silhouette_euclidean": 0.07509113848209381,
+    "calinski_harabasz": 152.83630427767656,
+    "davies_bouldin": 3.1640098695164003,
+    "source_counts_by_cluster": {
+      "0": {
+        "total": 666,
+        "by_source": {
+          "ViSoBERT": 224,
+          "VieBookRead": 442
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.33633633633633636,
+          "VieBookRead": 0.6636636636636637
+        }
+      },
+      "1": {
+        "total": 314,
+        "by_source": {
+          "ViSoBERT": 55,
+          "VieBookRead": 259
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.1751592356687898,
+          "VieBookRead": 0.8248407643312102
+        }
+      },
+      "2": {
+        "total": 617,
+        "by_source": {
+          "ViSoBERT": 483,
+          "VieBookRead": 134
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.7828200972447326,
+          "VieBookRead": 0.2171799027552674
+        }
+      },
+      "3": {
+        "total": 403,
+        "by_source": {
+          "ViSoBERT": 238,
+          "VieBookRead": 165
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.5905707196029777,
+          "VieBookRead": 0.4094292803970223
+        }
+      }
+    },
+    "source_cluster_association_cramers_v": 0.4552604431220382
+  },
+  "bert/seed_42": {
+    "cluster_sizes": {
+      "0": 900,
+      "1": 340,
+      "2": 455,
+      "3": 305
+    },
+    "silhouette_euclidean": 0.08345497399568558,
+    "calinski_harabasz": 142.62016303940317,
+    "davies_bouldin": 3.2410622804079123,
+    "source_counts_by_cluster": {
+      "0": {
+        "total": 900,
+        "by_source": {
+          "ViSoBERT": 387,
+          "VieBookRead": 513
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.43,
+          "VieBookRead": 0.57
+        }
+      },
+      "1": {
+        "total": 340,
+        "by_source": {
+          "ViSoBERT": 181,
+          "VieBookRead": 159
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.5323529411764706,
+          "VieBookRead": 0.4676470588235294
+        }
+      },
+      "2": {
+        "total": 455,
+        "by_source": {
+          "ViSoBERT": 380,
+          "VieBookRead": 75
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.8351648351648352,
+          "VieBookRead": 0.16483516483516483
+        }
+      },
+      "3": {
+        "total": 305,
+        "by_source": {
+          "ViSoBERT": 52,
+          "VieBookRead": 253
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.17049180327868851,
+          "VieBookRead": 0.8295081967213115
+        }
+      }
+    },
+    "source_cluster_association_cramers_v": 0.42188646218164044
+  },
+  "bamibert/seed_42": {
+    "cluster_sizes": {
+      "0": 1280,
+      "1": 316,
+      "2": 329,
+      "3": 75
+    },
+    "silhouette_euclidean": 0.09581204503774643,
+    "calinski_harabasz": 153.22092997629838,
+    "davies_bouldin": 2.271551646053052,
+    "source_counts_by_cluster": {
+      "0": {
+        "total": 1280,
+        "by_source": {
+          "ViSoBERT": 703,
+          "VieBookRead": 577
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.54921875,
+          "VieBookRead": 0.45078125
+        }
+      },
+      "1": {
+        "total": 316,
+        "by_source": {
+          "ViSoBERT": 58,
+          "VieBookRead": 258
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.18354430379746836,
+          "VieBookRead": 0.8164556962025317
+        }
+      },
+      "2": {
+        "total": 329,
+        "by_source": {
+          "ViSoBERT": 171,
+          "VieBookRead": 158
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.5197568389057751,
+          "VieBookRead": 0.48024316109422494
+        }
+      },
+      "3": {
+        "total": 75,
+        "by_source": {
+          "ViSoBERT": 68,
+          "VieBookRead": 7
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.9066666666666666,
+          "VieBookRead": 0.09333333333333334
+        }
+      }
+    },
+    "source_cluster_association_cramers_v": 0.3074999305901516
+  },
+  "bert/seed_agreement_ari": {
+    "seed_17_vs_23": 0.9857280559187689,
+    "seed_17_vs_42": 0.989567846162687,
+    "seed_23_vs_42": 0.9911639525564649
+  },
+  "bamibert/seed_agreement_ari": {
+    "seed_17_vs_23": 0.9983766472592679,
+    "seed_17_vs_42": 0.5441557927426225,
+    "seed_23_vs_42": 0.5442175595013145
+  },
+  "bert/consensus_17_23_42": {
+    "cluster_sizes": {
+      "0": 453,
+      "1": 901,
+      "2": 306,
+      "3": 340
+    },
+    "silhouette_euclidean": 0.08353674411773682,
+    "calinski_harabasz": 142.62508579243442,
+    "davies_bouldin": 3.2394420675600433,
+    "source_counts_by_cluster": {
+      "0": {
+        "total": 453,
+        "by_source": {
+          "ViSoBERT": 376,
+          "VieBookRead": 77
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.8300220750551877,
+          "VieBookRead": 0.16997792494481237
+        }
+      },
+      "1": {
+        "total": 901,
+        "by_source": {
+          "ViSoBERT": 390,
+          "VieBookRead": 511
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.4328523862375139,
+          "VieBookRead": 0.5671476137624861
+        }
+      },
+      "2": {
+        "total": 306,
+        "by_source": {
+          "ViSoBERT": 53,
+          "VieBookRead": 253
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.17320261437908496,
+          "VieBookRead": 0.826797385620915
+        }
+      },
+      "3": {
+        "total": 340,
+        "by_source": {
+          "ViSoBERT": 181,
+          "VieBookRead": 159
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.5323529411764706,
+          "VieBookRead": 0.4676470588235294
+        }
+      }
+    },
+    "source_cluster_association_cramers_v": 0.41577963338387236
+  },
+  "bamibert/consensus_17_23_42": {
+    "cluster_sizes": {
+      "0": 314,
+      "1": 403,
+      "2": 666,
+      "3": 617
+    },
+    "silhouette_euclidean": 0.07509113848209381,
+    "calinski_harabasz": 152.83630427767656,
+    "davies_bouldin": 3.1640098695164003,
+    "source_counts_by_cluster": {
+      "0": {
+        "total": 314,
+        "by_source": {
+          "ViSoBERT": 55,
+          "VieBookRead": 259
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.1751592356687898,
+          "VieBookRead": 0.8248407643312102
+        }
+      },
+      "1": {
+        "total": 403,
+        "by_source": {
+          "ViSoBERT": 238,
+          "VieBookRead": 165
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.5905707196029777,
+          "VieBookRead": 0.4094292803970223
+        }
+      },
+      "2": {
+        "total": 666,
+        "by_source": {
+          "ViSoBERT": 224,
+          "VieBookRead": 442
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.33633633633633636,
+          "VieBookRead": 0.6636636636636637
+        }
+      },
+      "3": {
+        "total": 617,
+        "by_source": {
+          "ViSoBERT": 483,
+          "VieBookRead": 134
+        },
+        "proportion_by_source": {
+          "ViSoBERT": 0.7828200972447326,
+          "VieBookRead": 0.2171799027552674
+        }
+      }
+    },
+    "source_cluster_association_cramers_v": 0.4552604431220382
+  }
+}
